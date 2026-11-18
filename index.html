@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M. Nizam — Digital &amp; AI Transformation Leader · Aviation · Technology · Telco</title>
+<meta name="description" content="M. Nizam — Digital &amp; AI Transformation Leader with 20+ years across Aviation, Technology and Telecommunications. Built a RM50M+ aviation training business. Founder of PilotPeak and a 10-product digital studio.">
+<meta property="og:title" content="M. Nizam — Digital &amp; AI Transformation Leader">
+<meta property="og:description" content="20+ years across Aviation, Technology and Telco. Engineer, operator, founder. 10 products shipped, 1M+ downloads across 70+ countries.">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    --navy: #0b1324;
+    --navy-2: #121c33;
+    --gold: #d4a017;
+    --gold-soft: rgba(212,160,23,0.12);
+    --text: #e9edf5;
+    --muted: #9aa6bd;
+    --faint: #66728a;
+    --line: rgba(255,255,255,0.08);
+    --card: #141f38;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+    background: var(--navy); color: var(--text); line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  img { display: block; max-width: 100%; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  svg.i { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+
+  /* NAV */
+  nav { position: sticky; top: 0; z-index: 10; background: rgba(11,19,36,0.88); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+  .brand { font-weight: 800; letter-spacing: 0.5px; text-decoration: none; }
+  .brand span { color: var(--gold); }
+  .nav-links { display: flex; gap: 24px; font-size: 14px; align-items: center; }
+  .nav-links a { text-decoration: none; color: var(--muted); }
+  .nav-links a:hover { color: var(--text); }
+  .nav-links .nav-cv { color: var(--gold); font-weight: 700; display: inline-flex; gap: 6px; align-items: center; }
+
+  /* HERO */
+  .hero { padding: 80px 0 64px; }
+  .hero-grid { display: grid; grid-template-columns: 1.55fr 0.75fr; gap: 48px; align-items: center; }
+  .eyebrow { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); background: var(--gold-soft); padding: 6px 12px; border-radius: 20px; margin-bottom: 24px; }
+  h1 { font-size: clamp(34px, 5.4vw, 56px); line-height: 1.08; letter-spacing: -1.5px; font-weight: 800; }
+  h1 .accent { color: var(--gold); }
+  .lede { font-size: clamp(16px, 2vw, 19px); color: var(--muted); max-width: 640px; margin-top: 22px; }
+  .cta-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 30px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 10px; font-weight: 700; font-size: 15px; text-decoration: none; transition: transform .15s; }
+  .btn:hover { transform: translateY(-1px); }
+  .btn.primary { background: var(--gold); color: #1a1405; }
+  .btn.ghost { border: 1px solid var(--line); color: var(--text); background: rgba(255,255,255,0.03); }
+  .location { margin-top: 18px; font-size: 14px; color: var(--faint); }
+
+  .portrait { position: relative; width: 100%; max-width: 300px; aspect-ratio: 1/1; margin-left: auto; border-radius: 50%; overflow: hidden; background: linear-gradient(160deg, #1d2a4a, #0e1730); border: 1px solid rgba(212,160,23,0.35); box-shadow: 0 30px 60px rgba(0,0,0,0.35); }
+  .portrait .mono { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 72px; font-weight: 800; color: var(--gold); letter-spacing: -2px; }
+  .portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+  /* STATS */
+  .stats { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; margin-top: 56px; }
+  .stat { background: var(--navy-2); padding: 22px 20px; }
+  .stat .num { font-size: 30px; font-weight: 800; color: var(--gold); letter-spacing: -0.5px; line-height: 1.2; }
+  .stat .usd { font-size: 13px; font-weight: 700; color: var(--text); opacity: .75; }
+  .stat .lbl { font-size: 13px; color: var(--muted); margin-top: 4px; line-height: 1.4; }
+
+  /* SECTIONS */
+  section { padding: 72px 0; border-top: 1px solid var(--line); }
+  .sec-label { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); }
+  h2 { font-size: clamp(26px, 3.6vw, 36px); letter-spacing: -0.8px; margin-top: 8px; line-height: 1.2; }
+  .sec-intro { color: var(--muted); max-width: 680px; margin-top: 12px; font-size: 17px; }
+
+  .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+  .pillars.four { grid-template-columns: repeat(2, 1fr); }
+  .pillar { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 28px; }
+  .pill-ico { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; background: var(--gold-soft); color: var(--gold); }
+  .pill-ico svg.i { width: 22px; height: 22px; }
+  .pillar h3 { font-size: 19px; margin-top: 16px; }
+  .pillar p { color: var(--muted); font-size: 15px; margin-top: 8px; }
+
+  /* PRODUCTS */
+  .group { margin-top: 52px; }
+  .group-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-bottom: 1px solid var(--line); padding-bottom: 12px; }
+  .group-head h3 { font-size: 20px; display: flex; align-items: center; gap: 10px; }
+  .group-head h3 svg.i { color: var(--gold); width: 22px; height: 22px; }
+  .group-head .proves { font-size: 14px; color: var(--muted); }
+  .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .reg { font-size: 12px; font-weight: 800; letter-spacing: 0.8px; color: var(--gold); border: 1px solid rgba(212,160,23,0.4); background: var(--gold-soft); padding: 5px 11px; border-radius: 6px; }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 20px; }
+  .grid.three { grid-template-columns: repeat(3, 1fr); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 14px; }
+  .card.flagship { border-color: rgba(212,160,23,0.45); background: linear-gradient(180deg, rgba(212,160,23,0.07), var(--card) 55%); }
+  .shot { border-radius: 12px; overflow: hidden; background: #0d162c; border: 1px solid var(--line); aspect-ratio: 16/10; }
+  .shot img { width: 100%; height: 100%; object-fit: contain; }
+  .shot.cover img { object-fit: cover; object-position: top; }
+  .card-top { display: flex; gap: 14px; align-items: center; }
+  .icon { position: relative; overflow: hidden; width: 52px; height: 52px; border-radius: 13px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 20px; color: #fff; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12); }
+  .icon img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .icon img.contain { object-fit: contain; padding: 6px; background: #05070b; }
+  .card h4 { font-size: 18px; line-height: 1.25; }
+  .status { font-size: 12px; font-weight: 700; margin-top: 2px; }
+  .status.live { color: #4ade80; }
+  .status.soon { color: #fbbf24; }
+  .card p { color: var(--muted); font-size: 15px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tag { font-size: 12px; font-weight: 600; color: var(--text); background: rgba(255,255,255,0.06); border: 1px solid var(--line); padding: 3px 9px; border-radius: 20px; }
+  .card .link { margin-top: auto; font-size: 14px; font-weight: 700; color: var(--gold); text-decoration: none; display: inline-flex; gap: 6px; align-items: center; }
+  .card .link:hover { text-decoration: underline; }
+  .flag { font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); }
+
+  .mini { display: flex; align-items: center; gap: 12px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; }
+  .mini .icon { width: 40px; height: 40px; border-radius: 10px; font-size: 15px; }
+  .mini b { font-size: 15px; display: block; }
+  .mini span { font-size: 13px; color: var(--muted); }
+  .faith-stats { display: flex; gap: 28px; flex-wrap: wrap; margin-top: 20px; color: var(--muted); font-size: 15px; }
+  .faith-stats b { color: var(--gold); font-size: 22px; display: block; }
+
+  /* MATRIX */
+  .matrix { width: 100%; border-collapse: collapse; margin-top: 32px; font-size: 15px; }
+  .matrix th { text-align: left; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--faint); padding: 12px 14px; border-bottom: 1px solid var(--line); }
+  .matrix td { padding: 14px; border-bottom: 1px solid var(--line); vertical-align: top; color: var(--muted); }
+  .matrix td:first-child { color: var(--text); font-weight: 700; white-space: nowrap; }
+
+  /* TIMELINE */
+  .timeline { margin-top: 40px; position: relative; padding-left: 28px; }
+  .timeline::before { content: ""; position: absolute; left: 6px; top: 6px; bottom: 6px; width: 2px; background: var(--line); }
+  .t-item { position: relative; padding-bottom: 32px; }
+  .t-item:last-child { padding-bottom: 0; }
+  .t-item::before { content: ""; position: absolute; left: -28px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: var(--navy); border: 2px solid var(--gold); }
+  .t-item.now::before { background: var(--gold); }
+  .t-when { font-size: 13px; font-weight: 700; color: var(--gold); letter-spacing: 0.5px; }
+  .t-role { font-size: 18px; font-weight: 700; margin-top: 2px; }
+  .t-org { font-size: 14px; color: var(--faint); }
+  .t-item p { color: var(--muted); font-size: 15px; margin-top: 8px; max-width: 760px; }
+  .t-item ul { margin-top: 8px; padding-left: 18px; color: var(--muted); font-size: 15px; max-width: 760px; }
+  .t-item li { margin-top: 4px; }
+
+  .contact { text-align: center; padding: 88px 0; }
+  .contact h2 { margin-top: 8px; }
+  .contact .sec-intro { margin: 12px auto 0; }
+  .contact .cta-row { justify-content: center; }
+  .targets { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 24px; }
+  footer { border-top: 1px solid var(--line); padding: 28px 0; text-align: center; font-size: 13px; color: var(--faint); }
+
+  /* MOBILE */
+  @media (max-width: 860px) {
+    .hero { padding: 48px 0 48px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+    .portrait { order: -1; max-width: 150px; margin: 0; }
+    .portrait .mono { font-size: 44px; }
+    .stats { grid-template-columns: repeat(2, 1fr); margin-top: 40px; }
+    .stats .stat:last-child { grid-column: span 2; }
+    .pillars, .pillars.four, .grid, .grid.three { grid-template-columns: 1fr; }
+    .nav-links a:not(.nav-cv) { display: none; }
+    section { padding: 56px 0; }
+    .btn { flex: 1 1 auto; justify-content: center; }
+    .matrix thead { display: none; }
+    .matrix, .matrix tbody, .matrix tr, .matrix td { display: block; width: 100%; }
+    .matrix tr { padding: 14px 0; border-bottom: 1px solid var(--line); }
+    .matrix td { border: none; padding: 2px 0; }
+    .matrix td:first-child { white-space: normal; font-size: 16px; }
+    .matrix td:last-child { color: var(--faint); font-size: 14px; }
+  }
+
+  @media print {
+    body { background: #fff; color: #111; }
+    nav, .cta-row, .shot, .portrait { display: none; }
+    .hero-grid { grid-template-columns: 1fr; }
+    section, .hero { padding: 20px 0; }
+    .card, .pillar, .mini, .stat { background: #fff !important; border-color: #ddd; }
+    .lede, .card p, .pillar p, .matrix td, .t-item p, .t-item ul, .sec-intro, .stat .lbl, .stat .usd { color: #333; }
+    .icon, .reg { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+    <symbol id="i-brief" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></symbol>
+    <symbol id="i-net" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></symbol>
+    <symbol id="i-term" viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+    <symbol id="i-out" viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></symbol>
+  </defs>
+</svg>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">M. <span>NIZAM</span></a>
+    <div class="nav-links">
+      <a href="#ai">AI</a>
+      <a href="#products">Products</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#career">Career</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-cv" href="CV_M_Nizam_2026.pdf" download><svg class="i"><use href="#i-down"/></svg>CV</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Digital &amp; AI Transformation Leader</div>
+        <h1>I've been the <span class="accent">engineer</span>,<br>the <span class="accent">operator</span>, and the <span class="accent">founder</span>.</h1>
+        <p class="lede">20+ years across Aviation, Technology and Telecommunications. I founded and led a RM50M+ aviation training business, and since then I've designed, built and shipped 10 digital products used in 70+ countries. I take ideas from strategy to live product, including in regulated industries — and I work with AI hands-on every day.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="mailto:wasnizam@gmail.com"><svg class="i"><use href="#i-mail"/></svg>wasnizam@gmail.com</a>
+          <a class="btn ghost" href="CV_M_Nizam_2026.pdf" download><svg class="i"><use href="#i-down"/></svg>Download CV</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/wasnizam" target="_blank" rel="noopener">LinkedIn<svg class="i"><use href="#i-out"/></svg></a>
+        </div>
+        <div class="location">Based in Malaysia · Open to senior roles across Asia, the Middle East and Europe</div>
+      </div>
+      <div class="portrait">
+        <span class="mono">MN</span>
+        <img src="photo.jpg" alt="M. Nizam" onerror="this.remove()">
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="num">20+</div><div class="lbl">years across Aviation, Tech &amp; Telco</div></div>
+      <div class="stat"><div class="num">RM50M+</div><div class="usd">≈ US$12M</div><div class="lbl">revenue in a single operating year</div></div>
+      <div class="stat"><div class="num">10</div><div class="lbl">digital products designed &amp; shipped</div></div>
+      <div class="stat"><div class="num">1M+</div><div class="lbl">downloads across the FaithTech suite</div></div>
+      <div class="stat"><div class="num">70+</div><div class="lbl">countries reached</div></div>
+    </div>
+  </div>
+</header>
+
+<section id="approach">
+  <div class="wrap">
+    <div class="sec-label">What I bring</div>
+    <h2>Three vantage points, one leader.</h2>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pill-ico"><svg class="i"><use href="#i-code"/></svg></div>
+        <h3>Engineer</h3>
+        <p>Seven years building enterprise telecoms infrastructure for millions of subscribers. Today I still build: on-device AI, Apple Watch biometrics, web SaaS. I know how systems are actually designed.</p>
+      </div>
+      <div class="pillar">
+        <div class="pill-ico"><svg class="i"><use href="#i-brief"/></svg></div>
+        <h3>Operator</h3>
+        <p>Founded an aviation training company and owned its P&amp;L, placing cadet pilots into EASA-standard flight training in Europe: airline contracts, 50+ partnerships across 15+ countries, RM50M+ (≈ US$12M) in a single year.</p>
+      </div>
+      <div class="pillar">
+        <div class="pill-ico"><svg class="i"><use href="#i-zap"/></svg></div>
+        <h3>Founder</h3>
+        <p>A 10-product studio built from zero, bootstrapped, with no agency and no external funding. Strategy, product, engineering, pricing and go-to-market, end to end.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ai">
+  <div class="wrap">
+    <div class="sec-label">AI capabilities</div>
+    <h2>AI, applied hands-on.</h2>
+    <p class="sec-intro">I lead AI transformation from experience, not slides: I build products with AI, run my own agents, and design for privacy from day one.</p>
+    <div class="pillars four">
+      <div class="pillar">
+        <div class="pill-ico"><svg class="i"><use href="#i-cpu"/></svg></div>
+        <h3>On-device fatigue modelling</h3>
+        <p>PilotPeak runs a science-based fatigue model (sleep, time awake, body clock and heart-rate variability) entirely on the device, built with Apple's Core ML framework. It's the biomathematical approach used in aviation fatigue risk management, and biometric data never leaves the phone.</p>
+      </div>
+      <div class="pillar">
+        <div class="pill-ico"><svg class="i"><use href="#i-net"/></svg></div>
+        <h3>Agentic AI</h3>
+        <p>I set up and run self-hosted AI agents, including OpenClaw and Nous Research's Hermes Agent, and build agent workflows that automate real work end to end.</p>
+      </div>
+      <div class="pillar">
+        <div class="pill-ico"><svg class="i"><use href="#i-term"/></svg></div>
+        <h3>AI-assisted development</h3>
+        <p>I build with AI coding agents. That's how one person shipped 10 products across iPhone, iPad, Mac, Watch and web, three of them this year.</p>
+      </div>
+      <div class="pillar">
+        <div class="pill-ico"><svg class="i"><use href="#i-lock"/></svg></div>
+        <h3>Responsible AI</h3>
+        <p>Privacy-first by design: on-device processing, no accounts, no data collected. Certified Information Privacy Associate (CIPA) and Privacy Engineer (CIPE).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="products">
+  <div class="wrap">
+    <div class="sec-label">Product portfolio</div>
+    <h2>10 products. Four capabilities.</h2>
+    <p class="sec-intro">Each product shows a capability I'd bring to a leadership role: regulated-industry transformation, enterprise SaaS, AI across industries, and consumer scale.</p>
+
+    <!-- SAFETY AI -->
+    <div class="group">
+      <div class="group-head">
+        <h3><svg class="i"><use href="#i-shield"/></svg>Safety &amp; fatigue AI</h3>
+        <div class="proves">Proves: digital transformation in regulated, safety-critical industries</div>
+      </div>
+      <div class="badges">
+        <span class="reg">ICAO FRMS</span><span class="reg">FAA PART 117</span><span class="reg">EASA FTL</span><span class="reg">GDPR-ALIGNED</span><span class="reg">ON-DEVICE PROCESSING</span>
+      </div>
+      <div class="grid">
+        <div class="card flagship">
+          <div class="flag">Flagship</div>
+          <figure class="shot"><img src="https://pilotpeak.app/images/PilotPeak_Hero.png" alt="PilotPeak app screens" loading="lazy" onerror="this.parentElement.remove()"></figure>
+          <div class="card-top">
+            <div class="icon" style="background:linear-gradient(145deg,#2a2f3a,#05070b);">▲<img src="assets/pilotpeak.png" alt="PilotPeak icon" onerror="this.remove()"></div>
+            <div><h4>PilotPeak</h4><div class="status live">● Live · iOS &amp; Apple Watch</div></div>
+          </div>
+          <p>On-device fatigue intelligence for commercial, cargo and GA pilots. Biometric monitoring, OCR roster scanning, digital logbook and type-rating tracking. A second product surface, the Ops Dashboard for airlines, is in development.</p>
+          <div class="tags"><span class="tag">Core ML</span><span class="tag">HealthKit</span><span class="tag">B2B2C</span><span class="tag">Privacy-first</span></div>
+          <a class="link" href="https://pilotpeak.app" target="_blank" rel="noopener">pilotpeak.app<svg class="i"><use href="#i-out"/></svg></a>
+        </div>
+        <div class="card">
+          <figure class="shot"><img src="https://wasnizam.github.io/fatigo-website/media/now.png" alt="Fatigo live alertness screen" loading="lazy" onerror="this.parentElement.remove()"></figure>
+          <div class="card-top">
+            <div class="icon" style="background:linear-gradient(145deg,#f08060,#d9573c);">◠<img src="assets/fatigo.png" alt="Fatigo icon" onerror="this.remove()"></div>
+            <div><h4>Fatigo</h4><div class="status live">● Live · iPhone, iPad &amp; Apple Watch</div></div>
+          </div>
+          <p>The same fatigue science, taken beyond aviation. A live alertness score and 24-hour fatigue forecast for shift workers and long-distance drivers, using sleep, body clock and Apple Watch heart-rate variability.</p>
+          <div class="tags"><span class="tag">Shift work</span><span class="tag">Logistics</span><span class="tag">Wearables</span><span class="tag">Subscription</span></div>
+          <a class="link" href="https://wasnizam.github.io/fatigo-website/" target="_blank" rel="noopener">Fatigo website<svg class="i"><use href="#i-out"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ENTERPRISE -->
+    <div class="group">
+      <div class="group-head">
+        <h3><svg class="i"><use href="#i-layers"/></svg>Enterprise &amp; public-data platforms</h3>
+        <div class="proves">Proves: enterprise SaaS, workforce digitisation, localisation</div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <figure class="shot cover"><img src="https://dobry.app/share.png" alt="Dobry QR attendance" loading="lazy" onerror="this.parentElement.remove()"></figure>
+          <div class="card-top">
+            <div class="icon" style="background:linear-gradient(145deg,#2c2c80,#1b1b55);color:#f5c542;">✓<img src="assets/dobry.png" alt="Dobry icon" onerror="this.remove()"></div>
+            <div><h4>Dobry</h4><div class="status live">● Live on web · iOS launching</div></div>
+          </div>
+          <p>QR attendance SaaS for universities, training providers and workplaces. Rotating anti-fraud QR codes, one-phone-per-person checks and geofencing, through to hours, overtime, leave and payslips. Launched in English and Czech.</p>
+          <div class="tags"><span class="tag">B2B SaaS</span><span class="tag">HR tech</span><span class="tag">Security design</span><span class="tag">Two markets</span></div>
+          <a class="link" href="https://dobry.app" target="_blank" rel="noopener">dobry.app<svg class="i"><use href="#i-out"/></svg></a>
+        </div>
+        <div class="card">
+          <figure class="shot cover"><img src="https://waktu-app-phi.vercel.app/assets/hero-mac.jpg" alt="Waktu calendar on Mac" loading="lazy" onerror="this.parentElement.remove()"></figure>
+          <div class="card-top">
+            <div class="icon" style="background:linear-gradient(145deg,#3a3f4a,#15181e);">W<img src="https://waktu-app-phi.vercel.app/assets/icon.png" alt="" onerror="this.remove()"></div>
+            <div><h4>Waktu</h4><div class="status soon">● Launching · iPhone, iPad &amp; Mac</div></div>
+          </div>
+          <p>Malaysia's traditional kitchen wall calendar, rebuilt for the phone. Integrates official government data (public and school holidays, prayer times, civil-service paydays) with Hijri, Chinese and Tamil calendars, plus a B2B print-calendar line for businesses.</p>
+          <div class="tags"><span class="tag">Government data</span><span class="tag">Localisation</span><span class="tag">Multi-platform</span><span class="tag">Offline-first</span></div>
+          <a class="link" href="https://waktu-app-phi.vercel.app" target="_blank" rel="noopener">Waktu website<svg class="i"><use href="#i-out"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAITHTECH -->
+    <div class="group">
+      <div class="group-head">
+        <h3><svg class="i"><use href="#i-globe"/></svg>FaithTech suite</h3>
+        <div class="proves">Proves: consumer scale and organic global growth</div>
+      </div>
+      <div class="faith-stats">
+        <div><b>1M+</b>downloads</div>
+        <div><b>70+</b>countries</div>
+        <div><b>250%</b>year-on-year growth</div>
+        <div><b>RM0</b>marketing budget</div>
+      </div>
+      <div class="grid three" style="margin-top:20px;">
+        <div class="mini"><div class="icon" style="background:linear-gradient(145deg,#ff914d,#e8763a);">R<img src="assets/ruqyah360.png" alt="Ruqyah360 icon" onerror="this.remove()"></div><div><b>Ruqyah360</b><span>Guided healing programs</span></div></div>
+        <div class="mini"><div class="icon" style="background:linear-gradient(145deg,#6a5cff,#ff5fa2);">M<img src="assets/imathurat.png" alt="iMathurat Pro icon" onerror="this.remove()"></div><div><b>iMathurat Pro</b><span>Daily practice</span></div></div>
+        <div class="mini"><div class="icon" style="background:linear-gradient(145deg,#2a9a45,#17652b);">iM<img src="assets/imanzil.png" alt="iManzil Pro icon" onerror="this.remove()"></div><div><b>iManzil Pro</b><span>Daily protection</span></div></div>
+        <div class="mini"><div class="icon" style="background:linear-gradient(145deg,#27d98f,#10a866);">T<img src="assets/tawaf.png" alt="Tawaf Tracker icon" onerror="this.remove()"></div><div><b>Tawaf Tracker</b><span>Umrah &amp; Hajj</span></div></div>
+        <div class="mini"><div class="icon" style="background:linear-gradient(145deg,#2a2d33,#08090b);">L</div><div><b>Labaikallah</b><span>Hajj &amp; Umrah dua</span></div></div>
+        <div class="mini"><div class="icon" style="background:linear-gradient(145deg,#3a3f4a,#15181e);">DQ<img src="assets/deepqalby.png" alt="DeepQalby icon" onerror="this.remove()"></div><div><b>DeepQalby</b><span>Launching</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="capabilities">
+  <div class="wrap">
+    <div class="sec-label">Capability map</div>
+    <h2>What each product proves.</h2>
+    <table class="matrix">
+      <thead><tr><th>Product</th><th>Leadership capability</th><th>Most relevant to</th></tr></thead>
+      <tbody>
+        <tr><td>PilotPeak</td><td>Digital transformation in a regulated industry; on-device fatigue modelling; enterprise B2B2C platform design</td><td>Airlines, airports, MRO, aviation technology</td></tr>
+        <tr><td>Fatigo</td><td>Taking one AI capability into new industries; wearables; subscription monetisation</td><td>Logistics, energy, mining, healthcare</td></tr>
+        <tr><td>Dobry</td><td>Enterprise SaaS; workforce digitisation; anti-fraud security design; multi-market launch</td><td>Corporates, HR technology, education</td></tr>
+        <tr><td>Waktu</td><td>Integrating official public data; deep localisation; multi-platform delivery; B2B revenue lines</td><td>Public sector, GLCs, consumer digital</td></tr>
+        <tr><td>FaithTech suite</td><td>Consumer scale: 1M+ downloads, 70+ countries, 250% YoY growth, organic acquisition</td><td>Super apps, consumer platforms, Muslim-majority markets</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="career">
+  <div class="wrap">
+    <div class="sec-label">Career</div>
+    <h2>20+ years across three industries.</h2>
+    <div class="timeline">
+      <div class="t-item now">
+        <div class="t-when">2024 – PRESENT</div>
+        <div class="t-role">Founder — PilotPeak</div>
+        <div class="t-org">Aviation safety intelligence · Global</div>
+        <p>On-device fatigue management for pilots, with a B2B2C model in which airlines subscribe on behalf of their pilot groups. Built and operated end to end: architecture, product, regulatory alignment and go-to-market.</p>
+      </div>
+      <div class="t-item now">
+        <div class="t-when">2021 – PRESENT</div>
+        <div class="t-role">Founder &amp; CEO — Digital Product Studio</div>
+        <div class="t-org">Deep Qalby · Malaysia · Global</div>
+        <p>A portfolio of 10 products across iPhone, iPad, Mac, Apple Watch and web, spanning FaithTech, safety AI and enterprise SaaS. 1M+ downloads across 70+ countries. Bootstrapped, with no external funding.</p>
+      </div>
+      <div class="t-item">
+        <div class="t-when">2015 – 2021</div>
+        <div class="t-role">Founder &amp; Chief Strategy Director</div>
+        <div class="t-org">Aviation Training Company · Malaysia, with a European partner academy</div>
+        <ul>
+          <li>Founded and led a company placing cadet pilots from Asia and the Middle East into EASA-standard flight training in Europe</li>
+          <li>RM50M+ (≈ US$12M) revenue in a single operating year, with full P&amp;L ownership</li>
+          <li>50+ strategic partnerships across 15+ countries; contracts with international cargo and commercial airlines</li>
+          <li>Built digital platforms for cadet recruitment, training management, airline partners and compliance tracking</li>
+          <li>Won a competitive tender against the world's largest aviation training corporation to acquire the European partner academy</li>
+          <li>Opened the academy's first musolla (prayer facility) for our Muslim cadet pilots</li>
+        </ul>
+      </div>
+      <div class="t-item">
+        <div class="t-when">2014</div>
+        <div class="t-role">Vice President, Marketing &amp; Business Development</div>
+        <div class="t-org">Aviax Ventures · Malaysia</div>
+        <p>Led the launch of Malaysia's first public Boeing 737-800 full-motion flight simulator.</p>
+      </div>
+      <div class="t-item">
+        <div class="t-when">2007 – 2014</div>
+        <div class="t-role">Senior System Engineer</div>
+        <div class="t-org">Maxis Communications · Malaysia</div>
+        <p>Designed, deployed and maintained enterprise telecoms infrastructure for Malaysia's largest mobile network: core network upgrades, capacity expansion and system integration at the scale of millions of subscribers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="sec-label">Let's talk</div>
+    <h2>Looking for a digital leader who still builds?</h2>
+    <p class="sec-intro">Open to Chief Digital Officer, VP Digital, Head of Digital Transformation and Head of AI Transformation roles across aviation, technology, telco and consumer digital, in Asia, the Middle East and Europe.</p>
+    <div class="targets">
+      <span class="tag">Chief Digital Officer</span>
+      <span class="tag">VP Digital</span>
+      <span class="tag">Head of Digital Transformation</span>
+      <span class="tag">Head of AI Transformation</span>
+      <span class="tag">Aviation Technology</span>
+    </div>
+    <div class="cta-row" style="margin-top:28px;">
+      <a class="btn primary" href="mailto:wasnizam@gmail.com"><svg class="i"><use href="#i-mail"/></svg>wasnizam@gmail.com</a>
+      <a class="btn ghost" href="CV_M_Nizam_2026.pdf" download><svg class="i"><use href="#i-down"/></svg>Download CV</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/wasnizam" target="_blank" rel="noopener">LinkedIn<svg class="i"><use href="#i-out"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 M. Nizam · Based in Malaysia</div>
+</footer>
+
+</body>
+</html>
